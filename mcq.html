@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCQ</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <a href="#maincontent">Skip to main content</a>
+
+  <header>
+    <a href="index.html">
+      <img src="./images/logo.jpeg" alt="Logo">
+    </a>
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="headings.html">Headings</a></li>
+        <li><a href="tables.html">Tables</a></li>
+        <li><a href="buttons.html">Buttons</a></li>
+        <li><a href="practice.html">Practice</a></li>
+        <li><a href="mcq.html">MCQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <h1>Mobile Accessibility Evaluation: MCQ Assessment</h1>
+    <p>
+      Welcome to the assessment phase, fellow co-learners! Now that we have completed our practical screen reader
+      testing on the previous page, it is time to apply our findings. The following questions are designed to test both
+      your general knowledge of mobile accessibility concepts (headings, tables, and buttons) and your specific
+      observations from the live test page you just audited. Read through each question below and select the most
+      accurate answer based on your screen reader observations and the topics covered in the respective learning
+      excersise.
+    </p>
+    <form>
+      <fieldset style="margin-bottom: 20px; border: 1px solid #ccc; padding: 15px;">
+        <legend style="font-weight: bold; font-size: 1.1em;">1. In which native app framework is programmatic
+          determination of heading levels supported natively?</legend>
+        <br>
+        <input type="radio" id="q1-o1" name="question1" value="a">
+        <label for="q1-o1">iOS</label><br><br>
+
+        <input type="radio" id="q1-o2" name="question1" value="b">
+        <label for="q1-o2">Android</label><br><br>
+
+        <input type="radio" id="q1-o3" name="question1" value="c">
+        <label for="q1-o3">Both iOS and Android frameworks support heading levels natively</label><br><br>
+
+        <input type="radio" id="q1-o4" name="question1" value="d">
+        <label for="q1-o4">Neither framework supports heading levels natively</label>
+      </fieldset>
+      <!-- Answer is ios -->
+
+      <fieldset style="margin-bottom: 20px; border: 1px solid #ccc; padding: 15px;">
+        <legend style="font-weight: bold; font-size: 1.1em;">2. How many programmatically determinable headings are
+          present in the test page you just audited?</legend>
+        <br>
+        <input type="radio" id="q2-o1" name="question2" value="1">
+        <label for="q2-o1">1</label><br><br>
+
+        <input type="radio" id="q2-o2" name="question2" value="2">
+        <label for="q2-o2">2</label><br><br>
+
+        <input type="radio" id="q2-o3" name="question2" value="3">
+        <label for="q2-o3">3</label><br><br>
+
+        <input type="radio" id="q2-o4" name="question2" value="4">
+        <label for="q2-o4">4</label>
+      </fieldset>
+      <!-- Answer is 3 (three) -->
+
+      <fieldset style="margin-bottom: 20px; border: 1px solid #ccc; padding: 15px;">
+        <legend style="font-weight: bold; font-size: 1.1em;">3. When a screen reader encounters a properly marked-up
+          data table in a mobile web browser, how can a user navigate row-by-row?</legend>
+        <br>
+        <input type="radio" id="q3-o1" name="question3" value="a">
+        <label for="q3-o1">By swiping down with two fingers anywhere on the screen</label><br><br>
+
+        <input type="radio" id="q3-o2" name="question3" value="b">
+        <label for="q3-o2">By setting the TalkBack Reading Controls or VoiceOver Rotor to "Rows" and swiping up or
+          down</label><br><br>
+
+        <input type="radio" id="q3-o3" name="question3" value="c">
+        <label for="q3-o3">Mobile browsers do not support row navigation; users must swipe linearly through every
+          cell</label><br><br>
+
+        <input type="radio" id="q3-o4" name="question3" value="d">
+        <label for="q3-o4">By double-tapping the table header to activate Grid Mode</label>
+      </fieldset>
+      <!-- Answer is By setting the TalkBack Reading Controls or VoiceOver Rotor to "Rows" and swiping up or down -->
+
+      <fieldset style="margin-bottom: 20px; border: 1px solid #ccc; padding: 15px;">
+        <legend style="font-weight: bold; font-size: 1.1em;">4. What structural element is missing from the data table
+          present in the test page?</legend>
+        <br>
+        <input type="radio" id="q4-o1" name="question4" value="a">
+        <label for="q4-o1">Row headers</label><br><br>
+
+        <input type="radio" id="q4-o2" name="question4" value="b">
+        <label for="q4-o2">Column headers</label><br><br>
+
+        <input type="radio" id="q4-o3" name="question4" value="c">
+        <label for="q4-o3">An accessible table caption</label><br><br>
+
+        <input type="radio" id="q4-o4" name="question4" value="d">
+        <label for="q4-o4">Programmatic association of table headers</label>
+      </fieldset>
+      <!-- Answer is An accessible table caption -->
+
+      <fieldset style="margin-bottom: 20px; border: 1px solid #ccc; padding: 15px;">
+        <legend style="font-weight: bold; font-size: 1.1em;">5. Why is it an accessibility issue if a button component
+          is built using generic text or image layouts without a native button role?</legend>
+        <br>
+        <input type="radio" id="q5-o1" name="question5" value="a">
+        <label for="q5-o1">The screen reader will completely skip the element and refuse to focus on it</label><br><br>
+
+        <input type="radio" id="q5-o2" name="question5" value="b">
+        <label for="q5-o2">The screen reader may read the text but will fail to announce the "Button" role, leaving
+          non-sighted users unaware that it is interactive</label><br><br>
+
+        <input type="radio" id="q5-o3" name="question5" value="c">
+        <label for="q5-o3">The mobile operating system will automatically crash when the user tries to double-tap
+          it</label><br><br>
+
+        <input type="radio" id="q5-o4" name="question5" value="d">
+        <label for="q5-o4">It alters the physical touch target size rendering it too small to pass a11y criteria</label>
+      </fieldset>
+      <!-- Answer is The screen reader may read the text but will fail to announce the "Button" role, leaving non-sighted users unaware that it is interactive -->
+
+      <fieldset style="margin-bottom: 20px; border: 1px solid #ccc; padding: 15px;">
+        <legend style="font-weight: bold; font-size: 1.1em;">6. On the test page, which element should have been
+          programmatically marked up as an expandable button to improve collapsible content accessibility?</legend>
+        <br>
+        <input type="radio" id="q6-o1" name="question6" value="a">
+        <label for="q6-o1">Our Vision-Aid Batch 13 Journey So Far</label><br><br>
+
+        <input type="radio" id="q6-o2" name="question6" value="b">
+        <label for="q6-o2">Instructions for the Evaluation Exercise</label><br><br>
+
+        <input type="radio" id="q6-o3" name="question6" value="c">
+        <label for="q6-o3">Our Learning Journey So Far</label><br><br>
+
+        <input type="radio" id="q6-o4" name="question6" value="d">
+        <label for="q6-o4">No expandable/collapsable content was found in test page</label>
+      </fieldset>
+      <!-- Answer is Instructions for the Evaluation Exercise  -->
+      <button type="submit">Submit Assessment</button>
+    </form>
+    <a href="practice.html" aria-label="Previous Page - Go back to Practice Sandbox">Previous Page</a>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>

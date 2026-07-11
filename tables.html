@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <a href="#maincontent">Skip to main content</a>
+
+    <header>
+        <a href="index.html">
+            <img src="./images/logo.jpeg" alt="Logo">
+        </a>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="buttons.html">Buttons</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="mcq.html">MCQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="maincontent">
+        <h1>Data Tables</h1>
+        <p>
+            Data tables are highly efficient for organizing complex information, but they present unique challenges when
+            translated to mobile touch-screens. When performing an accessibility audit, it is critical to understand
+            that data tables behave fundamentally differently depending on whether they are built into a Native App or a
+            Mobile Web App.
+        </p>
+        <p>Native mobile frameworks do not have a standard, built-in "HTML-style" grid system that automatically links
+            column headers to data cells out of the box.
+            <mark>Testing Experience:</mark> When testing a native app table, screen readers treat the grid as a flat,
+            sequential list of text blocks. Because there is no native "Table Mode" gesture navigation for native
+            components, you must test that the developers have grouped elements or manually added text labels so that
+            every single data cell announces its context (e.g., instead of just reading "50", it should read "Remaining
+            Leaves: 50").
+        </p>
+        <p>
+            Mobile web apps inherit the rich semantic structure of HTML tags (e.g., table, tr, th, td).
+            <mark>Testing Experience:</mark> Mobile web browsers fully support table navigation modes. When a screen
+            reader encounters a properly marked-up web table on a phone, the user can change their local settings to
+            navigate purely by rows or tables, allowing them to jump through tabular data horizontally and vertically
+            just like on a desktop.
+        </p>
+        <ul>
+            <li>Verify Contextual Continuity: As you swipe through data cells, the screen reader must convey the cell's
+                relationship to its header.
+                <ul>
+                    <li>On native apps, ensure the text description itself explicitly includes the header context.</li>
+                    <li>On mobile web, verify the browser reads the column header automatically.</li>
+                </ul>
+            </li>
+            <li>Test the Reading Flow Order: Swiping left-to-right should move the screen reader focus logically across
+                a single row before proceeding to the next. If the focus jumps erratically down columns or out of order,
+                the reading flow is broken.</li>
+            <li>Check for Table Mode : On mobile web, switch your screen reader to "Table" mode and ensure it recognizes
+                the container. If the device emits an error sound or says "No tables found", the website is using visual
+                styling (like CSS flexbox or divs) to mimic a table without using semantic HTML markup.</li>
+        </ul>
+        <h2>Screen Reader Navigation Gestures for Data Tables</h2>
+
+        <h3>
+            <button aria-expanded="false" aria-controls="android-content">Android: TalkBack</button>
+        </h3>
+        <div id="android-content" style="display: none;">
+            <p>To navigate tables on the mobile web, you can add "Tables" to your reading controls via TalkBack
+                settings.
+            </p>
+            <ol>
+                <li>Change Navigation Mode to Tables: Swipe up then down (or down then up) with a single finger until
+                    you
+                    hear TalkBack say "Tables". Alternatively, use a three-finger swipe up or down.</li>
+                <li>To move to the Next row - Swipe down with one finger.</li>
+                <li>To move to the Previous row - Swipe up with one finger.</li>
+                <li>To move to the next column - Swipe right with one finger.</li>
+                <li>To move to the previous column - Swipe left with one finger.</li>
+            </ol>
+        </div>
+
+        <h3>
+            <button aria-expanded="false" aria-controls="ios-content">iOS: VoiceOver</button>
+        </h3>
+        <div id="ios-content" style="display: none;">
+            <p>When a semantic table is active on a web page, VoiceOver unlocks structural options within the Rotor.</p>
+            <ol>
+                <li>To change Navigation Mode to rows/Tables rotate two fingers on the screen (like turning a physical
+                    dial)
+                    until you hear VoiceOver say "Rows" or "Tables".</li>
+                <li>To move to the Next Row - Swipe down with one finger (bypasses individual cells to move straight
+                    down
+                    the grid).</li>
+                <li>To move to the Previous Row - Swipe up with one finger.</li>
+                <li>For navigating Inside a Row - Swipe right (next cell) or left (previous cell) with one finger.</li>
+            </ol>
+        </div>
+        <div>
+            <a href="headings.html" aria-label="Previous Page - Read about Headings">Previous Page</a>
+            <a href="buttons.html" aria-label="Next Page - Read about Buttons">Next Page</a>
+        </div>
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

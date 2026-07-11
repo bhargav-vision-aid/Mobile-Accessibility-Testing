@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headings</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <a href="#maincontent">Skip to main content</a>
+
+    <header>
+        <a href="index.html">
+            <img src="./images/logo.jpeg" alt="Logo">
+        </a>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="buttons.html">Buttons</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="mcq.html">MCQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="maincontent">
+        <h1>About Headings</h1>
+        <p>
+            Headings are titles or subtitles that are displayed on a webpage or mobile screen. In HTML, headings are
+            defined with the h1 to h6 tags. Screen reader Users often skim a page by its headings. It is important to
+            use headings to show the document structure.
+        </p>
+        <p>
+            During an accessibility audit, testing headings ensures that visual titles match semantic reality. When a
+            screen reader user switches their device's navigation mode to look specifically for headings, properly
+            configured titles allow them to jump directly to major sections, bypassing repetitive content, images, and
+            buttons entirely.
+        </p>
+        <ul>
+            <li>Both iOS and Android support headings across native, hybrid, and mobile web environments.</li>
+            <li>Native iOS apps have better support for headings as developers can define heading levels,
+                just like in HTML – from level 1 to level 6. iOS also supports just a heading, with no level.</li>
+            <li>On the Android platform for native apps we can still make a semantic heading but we don’t have the
+                possibility for different levels.</li>
+        </ul>
+        <mark>React Native supports headings but no levels. </mark>
+        <h2>Screen Reader Navigation Gestures for Headings</h2>
+        <h3>
+            <button aria-expanded="false" aria-controls="android-content">Android: TalkBack</button>
+        </h3>
+        <div id="android-content" style="display: none;">
+            <p>
+                To move between headings using TalkBack, you must first change your reading control setting to
+                "Headings."
+            </p>
+            <ol>
+                <li> Change Navigation Mode to Headings - Swipe up then down (or down then up) with a single finger
+                    until
+                    you
+                    hear TalkBack say "Headings". Alternatively, you can use a three-finger swipe up or down.</li>
+                <li>To move to the Next Heading - Swipe down with one finger.</li>
+                <li>To move to the Previous Heading - Swipe up with one finger.</li>
+            </ol>
+        </div>
+        <h3>
+            <button aria-expanded="false" aria-controls="ios-content">iOS: VoiceOver</button>
+        </h3>
+        <div id="ios-content" style="display: none;">
+            <p>To move between headings using VoiceOver, you use the Rotor, which acts as a virtual dial for navigation
+                settings.</p>
+            <ol>
+                <li>To change Navigation Mode to Headings rotate two fingers on the screen (like turning a physical
+                    dial)
+                    until you hear VoiceOver say "Headings".</li>
+                <li>To move to the Next Heading - Swipe down with one finger.</li>
+                <li>To move to the Previous Heading - Swipe up with one finger.</li>
+            </ol>
+        </div>
+        <a href="tables.html" aria-label="Next Page - Read about Tables">Next Page</a>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

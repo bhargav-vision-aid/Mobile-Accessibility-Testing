@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <a href="#maincontent">Skip to main content</a>
+
+    <header>
+        <a href="index.html">
+            <img src="./images/logo.jpeg" alt="Logo">
+        </a>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="buttons.html">Buttons</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="mcq.html">MCQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="maincontent">
+        <h1>Buttons</h1>
+        <p>
+            A button is an interactive element that enables users to get the expected interactive feedback from the web
+            interface or mobile application following a particular command. Basically, a button is a control that allows
+            a user to communicate directly with the digital product and send the necessary commands to achieve a
+            particular goal. For example, it may be the task to send an email, buy a product, download some data or a
+            piece of content etc.
+        </p>
+        <p>
+            In mobile accessibility testing, ensuring buttons are fully perceivable and operable is critical because a
+            broken button completely blocks a user's journey. When auditing buttons, the rules and behaviors shift
+            depending on whether you are testing a Native App or a Mobile Web App.
+        </p>
+        <div>
+            <mark>Native vs. Mobile Web Buttons</mark>
+            <ul>
+                <li>Native Apps: Built using standard platform components, these automatically announce their role
+                    (e.g.,
+                    "Save, Button"). Bugs happen when developers build custom buttons out of flat text or images without
+                    labeling them as interactive elements.</li>
+                <li>Mobile Web Apps : Run inside mobile browsers using web tags. Standard HTML buttons work
+                    automatically,
+                    but problems arise when generic tags (like div or span) are styled to look like buttons without
+                    adding
+                    proper accessibility roles.</li>
+            </ul>
+        </div>
+        <ul>
+            <li>Verify the Label: Every button must announce a clear, descriptive purpose. Icon-only buttons (like a
+                trash can icon) must say something meaningful like "Delete item" instead of just "Button" or remaining
+                completely silent.</li>
+            <li>Confirm the "Button" Role: Listen for the word "Button" at the end of the announcement (e.g., "Submit,
+                Button"). If it is missing, the element lacks the correct structural role, and users won't know it can
+                be tapped.</li>
+            <li>Validate Touch Target Sizes: Ensure buttons meet minimum physical size guidelines so they are easy to
+                tap without missing:
+                <ul>
+                    <li>Android: Minimum area of 48 x 48 dp.</li>
+                    <li>iOS: Minimum area of 44 x 44 pt.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Screen Reader Navigation Gestures for Buttons</h2>
+        <h3>
+            <button aria-expanded="false" aria-controls="android-content">Android: TalkBack</button>
+        </h3>
+        <div id="android-content" style="display: none;">
+            <p>Users can skip directly from button to button by changing their screen reader's navigation mode.</p>
+            <ol>
+                <li>Change Navigation Mode to Controls - Swipe up then down (or down then up) with a single finger until
+                    you
+                    hear TalkBack say "Controls". Alternatively, you can use a three-finger swipe up or down.</li>
+                <li>To move to the Next Button - Swipe down with one finger.</li>
+                <li>To move to the Previous Button - Swipe up with one finger.</li>
+                <li>To activate the Button - Double-tap anywhere on the screen.</li>
+            </ol>
+        </div>
+
+        <h3>
+            <button aria-expanded="false" aria-controls="ios-content">iOS: VoiceOver</button>
+        </h3>
+        <div id="ios-content" style="display: none;">
+            <p>To move between buttons using VoiceOver, you use the Rotor, which acts as a virtual dial for navigation
+                settings.</p>
+            <ol>
+                <li>Change Navigation Mode to Buttons - Rotate two fingers on the screen (like turning a physical dial)
+                    until you hear VoiceOver say "Buttons" or "Form Controls".</li>
+                <li>To move to the Next Button - Swipe down with one finger.</li>
+                <li>To move to the Previous Button - Swipe up with one finger.</li>
+                <li>To activate the Button - Double-tap anywhere on the screen.</li>
+            </ol>
+        </div>
+        <div>
+            <a href="tables.html" aria-label="Previous Page - Read about Tables">Previous Page</a>
+            <a href="practice.html" aria-label="Next Page - Practice concepts">Next Page</a>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

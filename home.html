@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Mobile Accessibility Testing activity</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <a href="#maincontent">Skip to main content</a>
+
+    <header>
+        <a href="index.html">
+            <img src="./images/logo.jpeg" alt="Logo">
+        </a>
+        <nav aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="buttons.html">Buttons</a></li>
+                <li><a href="practice.html">Practice</a></li>
+                <li><a href="mcq.html">MCQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="maincontent">
+        <h1>Welcome, <span id="user-name"></span>!</h1>
+
+        <h2>Activity Summary</h2>
+        <p>Here is what you will be exploring next in this activity:</p>
+        <ul>
+            <li><strong>Headings:</strong> Learn how headings provide structural navigation for screen readers on mobile
+                platforms.</li>
+            <li><strong>Tables:</strong> Understand the differences in table navigation between native apps and the
+                mobile web.</li>
+            <li><strong>Buttons:</strong> Discover how interactive elements are identified and operated using touch
+                gestures.</li>
+            <li><strong>Practice:</strong> Apply your theoretical knowledge in a live sandbox environment to uncover
+                intentional accessibility defects.</li>
+            <li><strong>MCQ:</strong> Assess your understanding with a final multiple-choice quiz based on your
+                findings.</li>
+        </ul>
+        <a href="headings.html" aria-label="Start the learning activity "><strong>Start
+                Activity</strong></a>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
